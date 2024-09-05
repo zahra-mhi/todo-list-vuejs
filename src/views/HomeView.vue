@@ -1,9 +1,12 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import TaskList from "../components/TaskList.vue";
+import { ref } from "vue";
+const tasks = ref([
+  { id: 1, title: "gym", complited: true },
+  { id: 2, title: "study", complited: false },
+]);
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <TaskList :tasks="tasks" />
 </template>
