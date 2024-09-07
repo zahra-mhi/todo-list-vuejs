@@ -2,8 +2,12 @@
 import TaskList from "../components/TaskList.vue";
 import { ref } from "vue";
 const tasks = ref([
-  { id: 1, title: "gym", complited: true },
-  { id: 2, title: "study", complited: false },
+  { id: 1, title: "gym", completed: true },
+  { id: 2, title: "study", completed: false },
+  { id: 3, title: "sleep", completed: false },
+  { id: 4, title: "laundry", completed: true },
+  { id: 5, title: "cafee", completed: false },
+  { id: 6, title: "class", completed: false },
 ]);
 </script>
 
