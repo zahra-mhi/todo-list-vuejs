@@ -9,8 +9,13 @@ const tasks = ref([
   { id: 5, title: "cafee", completed: false },
   { id: 6, title: "class", completed: false },
 ]);
+
+function deleteItem(taskId) {
+  tasks.value = tasks.value.filter((task) => task.id !== taskId);
+  console.log(tasks.value);
+}
 </script>
 
 <template>
-  <TaskList :tasks="tasks" />
+  <TaskList :tasks="tasks" @deleteItem="deleteItem($event)" />
 </template>

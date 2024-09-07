@@ -10,7 +10,7 @@ const props = defineProps({
     <h1 class="text-center mb-4">Task List</h1>
     <ul class="px-2">
       <div v-for="task in tasks" :key="task.id">
-        <task :task="task" />
+        <task :task="task" @deleteItem="$emit('deleteItem', task.id)" />
       </div>
     </ul>
   </div>
